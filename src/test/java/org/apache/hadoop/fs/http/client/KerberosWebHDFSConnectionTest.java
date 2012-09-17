@@ -15,7 +15,7 @@ public class KerberosWebHDFSConnectionTest {
 	KerberosWebHDFSConnection conn = null;
 	@Before
 	public void setUp() throws Exception {
-		conn = new KerberosWebHDFSConnection("http://cdh4b.0.efoxconn.com:14000", "zen", "abc123");
+		conn = new KerberosWebHDFSConnection("http://cdh4b.0.efoxconn.com:14000", "fUcacfba0f0c29445d8284096097f925e1", "pea6e2d22-6e00-4101-b0d0-584765f3ed68");
 	}
 
 	@After
@@ -31,7 +31,7 @@ public class KerberosWebHDFSConnectionTest {
 	
 	@Test
 	public void listStatus() throws MalformedURLException, IOException, AuthenticationException {
-		String path= "user/zen";
+		String path= "user/fUcacfba0f0c29445d8284096097f925e1";
 		String json = conn.listStatus(path);
 		System.out.println(json);
 	}

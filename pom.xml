@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.foxconn.gds.sce</groupId>
+	<groupId>org.zxs</groupId>
 	<artifactId>webhdfs-java-client</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 
 	<dependencies>
 
@@ -134,10 +134,15 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
+	<repositories>
 		<repository>
-			<id>deploymentRepo</id>
-			<url>http://nexus.efoxconn.com/content/repositories/releases/</url>
+			<id>cdh.releases.repo</id>
+			<name>CDH Releases Repository</name>
+			<url>https://repository.cloudera.com/content/repositories/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
-	</distributionManagement>
+
+	</repositories>
 </project>

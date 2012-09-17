@@ -123,7 +123,7 @@ public class KerberosWebHDFSConnection implements WebHDFSConnection {
 		StringBuffer sb = new StringBuffer();
 		if (input) {
 			InputStream is = conn.getInputStream();
-			BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(is, "utf-8"));
 			String line = null;
 
 			while ((line = reader.readLine()) != null) {
